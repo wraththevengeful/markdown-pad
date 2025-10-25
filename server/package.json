@@ -1,5 +1,5 @@
 {
-  "name": "markdown-pad",
+  "name": "markdown-pad-server",
   "version": "1.0.0",
   "description": "A personal blog to learn REST APIs",
   "main": "app.js",

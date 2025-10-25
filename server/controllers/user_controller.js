@@ -1,6 +1,6 @@
 const jwt = require('jsonwebtoken');
 const passport = require('passport');
-const bcrypt = require('bcryptjs');
+const bcrypt = require('../node_modules/bcryptjs/umd');
 require('dotenv').config();
 const db = require('../db/queries')
 
