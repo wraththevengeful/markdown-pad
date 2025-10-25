@@ -13,7 +13,8 @@ async function authenticateWithDB(email, password, done) {
         const user = await db.retrieveAnUser(email);
         if (!user) return done(null, false, { message: "No user found" });
 
-        const isAMatch = (user.password_hash == password);
+        const isAMatch = await bcrypt.compare(password, user.password_hash);
+        // const isAMatch = (user.password_hash == password);
 
         if (!isAMatch) return done(null, false, { message: "wrong password" });
 

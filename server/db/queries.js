@@ -1,5 +1,11 @@
 const pool = require('./pool')
 
+async function addNewUserToDB(userdetails) {
+    await pool.query('INSERT INTO users (email, password_hash) VALUES ($1, $2)',
+        [userdetails.email, userdetails.password_hash]
+    )
+}
+
 async function retrieveAnUser(username) {
     const {rows} = await pool.query('SELECT * FROM users WHERE email = $1',[username]);
     return rows[0];
@@ -7,7 +13,8 @@ async function retrieveAnUser(username) {
 
 async function getAllPostsFromDB() {
     const {rows} = await pool.query('SELECT * FROM posts');
-    return rows;
+    const publishedPosts = rows.filter((post) => post.published);
+    return publishedPosts;
 }
 
 async function getOnePostFromDB(postid) {
@@ -46,7 +53,34 @@ async function updatePostInDB(postObject) {
     );
 }
 
+async function getAllUsersFromDB() {
+    const {rows} = await pool.query('SELECT email, admin, authorized FROM users');
+    return rows;
+}
+
+async function authorizeUserInDB(userid){
+    await pool.query('UPDATE users SET authorized = TRUE where email = $1',[userid]);
+}
+
+async function deAuthorizeUserInDB(userid){
+    await pool.query('UPDATE users SET authorized = FALSE where email = $1',[userid]);
+}
+
+async function getAllPostsFromDBAsAdmin() {
+    const {rows} = await pool.query('SELECT * FROM posts');
+    return rows;
+}
+
+async function publishAPostInDB(postid) {
+    await pool.query('UPDATE posts SET published = TRUE WHERE id = $1',[postid]);
+}
+
+async function unpublishAPostInDB(postid) {
+    await pool.query('UPDATE posts SET published = FALSE WHERE id = $1',[postid]);
+}
+
 module.exports = {
+    addNewUserToDB,
     retrieveAnUser,
     getAllPostsFromDB,
     getOnePostFromDB,
@@ -54,5 +88,11 @@ module.exports = {
     postNewPostInDB,
     verifyOriginalAuthor,
     updatePostInDB, 
-    postNewCommentInDB
+    postNewCommentInDB,
+    getAllUsersFromDB,
+    authorizeUserInDB,
+    deAuthorizeUserInDB,
+    getAllPostsFromDBAsAdmin,
+    publishAPostInDB,
+    unpublishAPostInDB
 }

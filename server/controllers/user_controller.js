@@ -1,6 +1,8 @@
 const jwt = require('jsonwebtoken');
 const passport = require('passport');
+const bcrypt = require('bcryptjs');
 require('dotenv').config();
+const db = require('../db/queries')
 
 // Authentication function
 async function authenticateToken (req, res, next) {
@@ -39,7 +41,7 @@ async function userLogin(req, res, next) {
 
         // Create JWT payload
         const payload = { email: user.email, admin: user.admin, authorized:user.authorized };
-        const token = jwt.sign(payload, process.env.JWT_SECRET, { expiresIn: '15m' });
+        const token = jwt.sign(payload, process.env.JWT_SECRET, { expiresIn: '30m' });
 
         // Return token
         return res.json({ token });
@@ -47,8 +49,19 @@ async function userLogin(req, res, next) {
     })(req, res, next);
 };
 
+async function userSignup(req, res) {
+    if(!(req.body.email) || !(req.body.password)) return res.json({message:"Missing Fields"});
+    const password_hash = await bcrypt.hash(req.body.password, 10);
+    const userdetails = {
+        email:req.body.email,
+        password_hash: password_hash
+    }
+    await db.addNewUserToDB(userdetails);
+    res.json({message:"User Created"});
+}
 
 module.exports = {
     authenticateToken,
     userLogin,
+    userSignup
 }

@@ -8,6 +8,7 @@ const passport = require('passport');
 require('dotenv').config();
 
 // Login route
+userRouter.post('/signup', userController.userSignup);
 userRouter.post('/login', userController.userLogin);
 
 
