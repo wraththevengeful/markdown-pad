@@ -4,7 +4,10 @@
 /* Variables */
 :root{
   --primary-green: #91AB8F;
+  --secondary-green: #14551F;
   --button-brown : #2F2D2D;
+  --primary-sandal: #FFFCF5;
+  --primary-red: #B54D4D;
 }
 
 /* RESET DEFAULT VALUES HERE */

@@ -1,5 +1,4 @@
 import './App.css'
-// import 'normalize.css'
 import Home from './Components/Home'
 
 function App() {

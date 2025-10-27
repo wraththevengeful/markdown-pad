@@ -8,7 +8,7 @@ function Header(){
             </div>
             <div id="navButtons">
                 <a href="#">About Us</a>
-                <a href="#" id="signinlink">Sign in</a>
+                <a href="#" className="buttonLink">Sign in</a>
             </div>
         </header>
     )

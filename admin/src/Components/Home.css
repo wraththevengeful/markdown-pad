@@ -1,0 +1,52 @@
+body {
+    background-color: var(--primary-sandal);
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#homeImage>img {
+    height: 35rem;
+    width: auto;
+    object-fit: contain;
+}
+
+#homeText {
+    padding: 0rem 0rem 0 15rem;
+}
+
+#homeImage {
+    padding: 0 10rem 0 0;
+}
+
+.smallRedText {
+    font-family: "Overpass Mono", monospace;
+    font-weight: normal;
+    color: var(--primary-red);
+}
+
+.largeGreenText {
+    font-family: "Overpass Mono", monospace;
+    font-weight: bold;
+    font-size: 3rem;
+    color: var(--secondary-green);
+}
+
+.buttonLink {
+    color: white;
+    background-color: var(--button-brown);
+    display: inline-block;
+    margin: 20px 0;
+    padding: 1rem;
+    width: 10rem;
+    text-align: center;
+    border-radius: 50px;
+    font-family: "Open Sans", sans-serif;
+}
+
+.buttonLink:hover{
+    opacity: 95%;
+}

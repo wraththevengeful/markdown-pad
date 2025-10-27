@@ -32,7 +32,7 @@ header {
     color: inherit;
 }
 
-#navButtons>#signinlink{
+#navButtons>.buttonLink{
     color: white;
     background-color: var(--button-brown);
     display: inline-block;
@@ -40,4 +40,8 @@ header {
     width: 5rem;
     text-align: center;
     border-radius: 50px;
+}
+
+#navButtons>.buttonLink:hover{
+    opacity: 95%;
 }
