@@ -1,0 +1,51 @@
+#PostsSection>h2{
+    font-family: "Source Serif 4", serif;
+    font-weight: normal;
+    font-size: 2rem;
+}
+
+.postArticle{
+    /* display: flex; */
+    /* flex-direction: column; */
+    font-family: "Open Sans", sans-serif;
+    background-color: var(--primary-green-half);
+    width: 30rem;
+    min-width: 30rem;
+    max-width: 40rem;
+    min-height: 12.5rem;
+    padding: 3rem;
+    border-radius: 10px;
+}
+
+.postArticleHeading{
+    display: flex;
+    justify-content: space-between;
+}
+
+.postTitle{
+    font-family: "Overpass",sans-serif;
+    font-weight: normal;
+    font-size: 1.75rem;
+}
+
+.postAuthor{
+    font-style: italic;
+    font-size: 0.9rem;
+}
+
+.postDesc>p{
+    margin: 1rem 0 2rem 0;
+}
+
+.postCategory{
+    justify-self: flex-end;
+}
+
+.postCategory>p{
+    background-color: var(--tertiary-green);
+    display: inline;
+    padding: 0.5rem 1rem;
+    color: white;
+    font-size: 0.9rem;
+    border-radius: 50px;
+}
