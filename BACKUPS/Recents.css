@@ -1,0 +1,47 @@
+#recentsSection{
+    position: relative;
+    background-color: var(--primary-green-half);
+    padding: 2rem;
+    width: 22rem;
+    margin: 4rem 0 0 4rem;
+}
+
+#recentsSection, .recentsSectionPost{
+    border-radius: 10px;
+}
+
+
+.recentsSectionPost{
+    background-color: var(--primary-sandal);
+    height: 6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 2rem;
+    margin: 2rem 0;
+}
+
+.recentsSectionPost h3, .recentsSectionPost p{
+    font-family: "Open Sans", sans-serif;
+}
+
+.recentsSectionPost h3{
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.recentsSectionPost p{
+    font-size: 0.9rem;
+}
+
+#recentsSectionTitle{
+    position: absolute;
+    top: -20px;
+    left: 20px;
+    font-family: "Overpass Mono", monospace;
+    background-color: #C68888;
+    display: inline;
+    border-radius: 15px;
+    font-weight: bold;
+    padding: .75rem 1.5rem;
+}

@@ -1,0 +1,107 @@
+body {
+    background-color: var(--primary-sandal);
+}
+
+main#HomeBox {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 0rem 0rem 0 15rem;
+}
+
+#homeImage>img {
+    height: 35rem;
+    width: auto;
+    object-fit: contain;
+}
+
+#homeText {
+    padding: 2rem 2rem;
+    width: 100%;
+}
+
+#homeImage {
+    padding: 0 10rem 0 0;
+}
+
+.smallRedText {
+    font-family: "Overpass Mono", monospace;
+    font-weight: normal;
+    color: var(--primary-red);
+}
+
+.largeGreenText {
+    font-family: "Overpass Mono", monospace;
+    font-weight: bold;
+    font-size: 3rem;
+    color: var(--secondary-green);
+}
+
+.buttonLink {
+    color: white;
+    background-color: var(--button-brown);
+    display: inline-block;
+    margin: 20px 0;
+    padding: 1rem;
+    width: 10rem;
+    text-align: center;
+    border-radius: 50px;
+    font-family: "Open Sans", sans-serif;
+}
+
+.buttonLink:hover{
+    opacity: 95%;
+}
+
+
+/* HOME HEADER */
+/* Header.jsx */
+.headerHome {
+    background-color: var(--primary-green);
+    height: 7.5rem;
+    display: flex;
+    align-items: center;
+    padding: 0 5rem;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+}
+
+#mainLogoHome {
+    font-family: "Overpass Mono", monospace;
+    font-optical-sizing: auto;
+}
+
+#mainLogoHome h1 {
+    font-size: 1.5rem;
+    font-weight: normal;
+    text-decoration: underline;
+    text-shadow: 0px 2px 2px rgba(0,0,0,0.25);
+}
+
+#navButtons {
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+}
+
+#navButtons>*{
+    margin:0px 1rem ;
+    font-size: 1rem;
+    color: inherit;
+}
+
+#navButtons>.buttonLink{
+    color: white;
+    background-color: var(--button-brown);
+    display: inline-block;
+    padding: 1rem;
+    width: 5rem;
+    text-align: center;
+    border-radius: 50px;
+}
+
+#navButtons>.buttonLink:hover{
+    opacity: 95%;
+}

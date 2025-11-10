@@ -1,0 +1,36 @@
+#searchBoxOuter{
+    background-color: var(--primary-green-half);
+    width: 20rem;
+    height: 5rem;
+    margin: 4rem 0 0 4rem;
+    border-radius: 15px;
+    padding: 3rem;
+    font-family: "Open Sans", sans-serif;
+    
+}
+
+#searchBoxOuter h2{
+    font-family: "Overpass Mono", monospace;
+    font-size: 1.25rem;
+}
+
+#searchBoxOuter input[type="submit"], #searchBoxOuter input[type="text"]{
+    padding: 0.7rem;
+    border-radius: 10px;
+    border: none;
+    margin: 10px 10px 0px 0px;
+}
+
+#searchBoxOuter input[type="text"]{
+    background-color: var(--primary-sandal);
+}
+
+#searchBoxOuter input[type="submit"]{
+    background-color: var(--button-brown);
+    color: white;
+    width: 5rem;
+}
+
+#searchBoxOuter input[type="text"]:focus{
+    outline: none;
+}

@@ -2,10 +2,12 @@ body {
     background-color: var(--primary-sandal);
 }
 
-main {
+main#HomeBox {
     display: flex;
     align-items: center;
+    flex-direction: row;
     justify-content: space-around;
+    padding: 0rem 0rem 0 15rem;
 }
 
 #homeImage>img {
@@ -15,7 +17,8 @@ main {
 }
 
 #homeText {
-    padding: 0rem 0rem 0 15rem;
+    padding: 2rem 2rem;
+    width: 100%;
 }
 
 #homeImage {

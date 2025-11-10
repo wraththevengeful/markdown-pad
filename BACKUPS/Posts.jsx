@@ -31,6 +31,9 @@ function Posts(){
             <h2>Posts</h2>
             <div id='PostsContainer'>
                 <Post></Post>
+                <Post></Post>
+                <Post></Post>
+                <Post></Post>
             </div>
         </section>
     )

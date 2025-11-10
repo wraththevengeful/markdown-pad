@@ -1,8 +1,9 @@
 import './Footer.css'
 
-function Footer(){
+function Footer({isFixed}){
+    const conditionalStatic = isFixed ? "fixedFooter" : "";
     return (
-        <footer>
+        <footer className={conditionalStatic}> 
             <a href="#">Help</a>
             <a href="#">Credits</a>
             <a href="#">Raise an Issue</a>
