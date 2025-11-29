@@ -1,0 +1,75 @@
+article.postTile {
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+    border-radius: 20px;
+    background-color: var(--tertiary-green);
+    height: 200px;
+    width: 400px;
+}
+
+.postTitleAuthor {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 0 10px 0;
+}
+
+.postCategory {
+    margin-top: auto;
+    justify-self: flex-end;
+
+    background-color: var(--button-green);
+    display: inline-block;
+    width: 80px;
+    padding: .5rem;
+    border-radius: 50px;
+    text-align: center;
+    color: var(--font-white);
+    align-self: flex-end;
+}
+
+.postCategory:hover{
+    background-color: var(--button-green-hover);
+}
+
+.postTitles {
+    font-family: "Overpass", sans-serif;
+    font-weight: normal;
+    font-size: 2rem;
+}
+
+.postAuthor {
+    font-style: italic;
+    font-size: 0.75rem;
+}
+
+/* Mobile */
+@media screen and (max-width:900px) {
+    main{
+        padding: 2rem;
+    }
+
+    article.postTile {
+        width: 225px;
+        height: 150px;
+        padding: 3rem;
+    }
+
+    .postTitles{
+        font-size: 1.5rem;
+    }
+
+    .postAuthor{
+        font-size: 0.60rem;
+    }
+
+    .postDesc{
+        font-size: 0.75rem;
+    }
+
+    .postCategory{
+        font-size: 0.75rem;
+        width: 60px;
+    }
+}

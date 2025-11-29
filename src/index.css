@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Overpass+Mono:wght@300..700&family=Overpass:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* RESET STYLES */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1, h2, h3{
+  font-weight: normal;
+  margin: 0;
+}
+
+input[type="text"],
+input[type="submit"] {
+    /* 1. Remove OS styling */
+    appearance: none;
+    -webkit-appearance: none; /* Safari/Chrome */
+
+    /* 2. Remove box styling */
+    border: none;
+    background: transparent;
+    border-radius: 0; /* Important for iOS */
+    box-shadow: none;
+
+    /* 3. Remove spacing */
+    padding: 0;
+    margin: 0;
+
+    /* 4. Remove Focus Glow (Blue outline) */
+    outline: none;
+}
+
+/* global colors */
+:root{
+  --primary-brown: #2F2D2D;
+  --font-white: #fff;
+  --primary-green: #91AB8F;
+  --secondary-green:#14551F;
+  --tertiary-green:#91ab8f80;
+  --button-green:#75926F;
+  --button-green-hover:#5f795a;
+  --primary-red: #B54D4D;
+  --secondary-red:#C68888;
+  --primary-sandal: #FFFCF5;
+}
+
+
+/* GLOBAL STYLES */
+html{
+  font-family: "Open Sans", sans-serif;
+  background-color: var(--primary-sandal);
+}
+
+body{
+  margin: 0;
+}
+
+p{
+  margin: 0;
+}

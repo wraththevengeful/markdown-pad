@@ -1,0 +1,50 @@
+aside#recentPosts {
+    background-color: var(--tertiary-green);
+    padding: 3rem 2rem;
+    width: 300px;
+    border-radius: 10px;
+    position: relative;
+}
+
+article.singleRecentPost {
+    background-color: var(--primary-sandal);
+    padding: 1rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    box-shadow: 9px 10px 5px -8px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 9px 10px 5px -8px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 9px 10px 5px -8px rgba(0, 0, 0, 0.2);
+}
+
+article.singleRecentPost>h3 {
+    font-weight: 600;
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+article.singleRecentPost>p {
+    font-size: 0.8rem;
+}
+
+p.recentsTitle {
+    position: absolute;
+    top: -25px;
+    left: 30px;
+    background-color: var(--secondary-red);
+    font-weight: bold;
+    padding: .75rem 2rem;
+    border-radius: 20px;
+}
+
+/* MOBILE*/
+@media screen and (max-width:900px) {
+
+    aside#recentPosts {
+        width: 275px;
+    }
+
+    article.singleRecentPost {
+        background-color: var(--primary-sandal);
+        width: 15rem;
+    }
+}

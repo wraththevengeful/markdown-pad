@@ -1,0 +1,46 @@
+div.searchBar {
+    background-color: var(--tertiary-green);
+    width: 300px;
+    /* height: 100px; */
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+div.searchBar>h2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+#searchTerm {
+    background-color: var(--primary-sandal);
+}
+
+input[type="text"]#searchTerm {
+    height: 1rem;
+    width: 12rem;
+    border-radius: 10px;
+    padding: 10px;
+    color: #444;
+}
+
+input[type="submit"]#searchButton {
+    margin-left: 10px;
+    background-color: var(--primary-brown);
+    color: var(--font-white);
+    padding: 0.6rem 1rem;
+    border-radius: 10px;
+    font-family: "Open Sans", sans-serif;
+}
+
+@media screen and (max-width:900px) {
+
+    div.searchBar {
+        width: 275px;
+    }
+
+    input[type="text"]#searchTerm{
+        width: 10rem;
+    }
+
+}

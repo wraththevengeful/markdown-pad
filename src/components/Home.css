@@ -1,0 +1,168 @@
+body {
+    background-color: var(--primary-sandal);
+}
+
+header#homeHeader {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 5rem;
+    background-color: var(--primary-green);
+}
+
+
+header#homeHeader>img {
+    height: 30px;
+    width: auto;
+}
+
+main#introHomeMain {
+    display: flex;
+    height: 70vh;
+    justify-content: space-evenly;
+    padding: 0 15rem;
+    align-items: center;
+    flex-grow: 1;
+}
+
+#homeLinks {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#homeLinks>:first-child {
+    margin-right: 50px;
+}
+
+#homeLinks>:nth-child(2) {
+    background-color: var(--primary-brown);
+    color: var(--font-white);
+    height: 1.25rem;
+    width: 6rem;
+    padding: 1rem;
+    border-radius: 50px;
+    text-align: center;
+    display: inline-block;
+}
+
+#homeText {
+    font-family: "Overpass Mono", monospace;
+    width: 30rem;
+    max-width: 30rem;
+}
+
+#homeText .smallRedText {
+    color: var(--primary-red);
+}
+
+#homeText .largeGreenText {
+    color: var(--secondary-green);
+    font-weight: bold;
+    font-size: 2.5rem;
+}
+
+#homeText a {
+    background-color: var(--primary-brown);
+    color: var(--font-white);
+    height: 1.25rem;
+    width: 8rem;
+    margin-top: 20px;
+    padding: 1rem;
+    border-radius: 50px;
+    text-align: center;
+    display: inline-block;
+    font-family: "Open Sans", sans-serif;
+}
+
+#homeText a:hover,
+#homeLinks>:nth-child(2):hover {
+    opacity: 0.95;
+}
+
+#homeImage>img {
+    width: auto;
+    height: 20rem;
+}
+
+footer {
+    background-color: var(--primary-green);
+    padding: 3rem 0rem;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footerLinks>a {
+    margin-right: 30px;
+}
+
+
+/* Mobile */
+@media screen and (max-width:900px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+    header#homeHeader {
+        padding: 2rem 1rem;
+        justify-content: space-around;
+        position: relative;
+        align-items: center;
+    }
+
+    header#homeHeader>img {
+        width: auto;
+        height: 20px;
+    }
+
+    #homeLinks :nth-child(1) {
+        display: none;
+    }
+
+    #homeLinks :nth-child(2) {
+        /* height: 1rem; */
+        /* background-color: inherit; */
+        width: 6rem;
+        padding: .75rem;
+    }
+
+    #homeText .largeGreenText {
+        font-size: 1.5rem;
+    }
+
+    #homeImage>img {
+        width: auto;
+        height: 10rem;
+        position: absolute;
+        left: 30%;
+        top: 30%;
+        opacity: 0.25;
+    }
+
+    main {
+        padding: 0 5rem;
+        bottom: 0;
+        height: 100vh;
+        position: relative;
+        flex-grow: 1;
+    }
+
+    footer {
+        padding: 1rem 0;
+        margin-top: auto;
+        position: static;
+        width: 100%;
+        /* flex-shrink: 0; */
+    }
+
+    .footerLinks {
+        font-size: 0.75rem;
+
+    }
+
+}

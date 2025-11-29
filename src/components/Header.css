@@ -1,0 +1,22 @@
+#fullUseHeader{
+    padding: 3rem 15rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+#fullUseHeader>img{
+    height: 25px;
+    width: auto;
+}
+
+/* MOBILE */
+@media screen and (max-width:900px) {
+    #fullUseHeader{
+        padding: 2rem 3rem;
+    }
+
+    #fullUseHeader>img:first-child{
+        height: 20px;
+        width: auto;
+    }
+}
